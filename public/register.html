@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Engineering Registrierung</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Header mit blauem Banner – diesen Stil können Sie auch in index.html und register.html einbinden */
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section.topic {
+            margin-bottom: 40px;
+            display: none; /* Alle Themen zunächst ausblenden */
+        }
+        section.topic.active {
+            display: block;
+        }
+        section.topic h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #eee;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Registrierung</h1>
+    <form id="registrationForm">
+        <label for="firstName">Vorname:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <label for="lastName">Nachname:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <fieldset>
+            <legend>Geschlecht:</legend>
+            <label><input type="radio" name="gender" value="männlich" required> Männlich</label>
+            <label><input type="radio" name="gender" value="weiblich"> Weiblich</label>
+            <label><input type="radio" name="gender" value="divers"> Divers</label>
+        </fieldset>
+        <br>
+        <label for="interest">Interessenskategorie:</label>
+        <select id="interest" name="interest" required>
+            <option value="HTML5">HTML5</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        <br>
+        <label for="comments">Kommentare (optional, max. 100 Zeichen):</label>
+        <textarea id="comments" name="comments" maxlength="100"></textarea>
+        <br>
+        <label>
+            <input type="checkbox" id="terms" required>
+            Ich akzeptiere die Nutzungsbedingungen
+        </label>
+        <br>
+        <button type="submit">Registrierung</button>
+    </form>
+    <div id="feedback"></div>
+</div>
+<script src="register.js"></script>
+</body>
+</html>

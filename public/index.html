@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Engineering Inhalte</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Header mit blauem Banner – diesen Stil können Sie auch in index.html und register.html einbinden */
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section.topic {
+            margin-bottom: 40px;
+            display: none; /* Alle Themen zunächst ausblenden */
+        }
+        section.topic.active {
+            display: block;
+        }
+        section.topic h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #eee;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Web Engineering - Login</h1>
+</header>
+<div class="container">
+    <h1>Web Engineering – Labor Prof. Dr. J. Schneider</h1>
+    <form id="loginForm">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Noch kein Benutzer? <a href="register.html">Registrieren</a></p>
+    <div id="feedback"></div>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

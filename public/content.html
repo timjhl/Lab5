@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Engineering Inhalte</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Header im blauen Banner-Stil */
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section.topic {
+            margin-bottom: 40px;
+            display: none; /* Alle Themen zunächst ausblenden */
+        }
+        section.topic.active {
+            display: block;
+        }
+        section.topic h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #eee;
+            margin-top: 20px;
+        }
+        /* Container für die Karte */
+        #map {
+            height: 300px;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Web Engineering – Inhalte</h1>
+    <nav>
+        <ul>
+            <li><a data-topic="HTML5">HTML5</a></li>
+            <li><a data-topic="CSS">CSS</a></li>
+            <li><a data-topic="JavaScript">JavaScript</a></li>
+            <li><a data-topic="FlexBox">FlexBox</a></li>
+            <li><a data-topic="GridBox">GridBox</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="HTML5" class="topic">
+        <h2>HTML5</h2>
+        <p>
+            HTML5 ist die neueste Version der Hypertext Markup Language und bietet moderne Funktionen, die weit über die reine Strukturierung von Inhalten hinausgehen. Semantische Elemente wie <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> oder <code>&lt;article&gt;</code> ermöglichen es, Dokumente besser zu gliedern und für Suchmaschinen sowie Screenreader zugänglich zu machen. Zudem unterstützt HTML5 Multimedia-Integration und lokale Speicherung.
+        </p>
+    </section>
+    <section id="CSS" class="topic">
+        <h2>CSS</h2>
+        <p>
+            Cascading Style Sheets (CSS) sind unverzichtbar, um das Layout und das Erscheinungsbild einer Webseite zu definieren. Mit CSS können Sie Farben, Schriftarten, Abstände und das responsive Verhalten Ihrer Webseite steuern. Dank fortschrittlicher Techniken wie Flexbox und Grid Layout lassen sich komplexe Designs erstellen, die sich dynamisch an verschiedene Bildschirmgrößen anpassen.
+        </p>
+    </section>
+    <section id="JavaScript" class="topic">
+        <h2>JavaScript</h2>
+        <p>
+            JavaScript ist die Skriptsprache des Webs, die es ermöglicht, Webseiten interaktiv und dynamisch zu gestalten. Mit JavaScript lassen sich Benutzerinteraktionen verarbeiten, Animationen realisieren und Daten asynchron abrufen. Diese Sprache ist ein zentrales Element moderner Webanwendungen und wird sowohl auf der Client- als auch auf der Serverseite (z. B. mit Node.js) eingesetzt.
+        </p>
+    </section>
+    <section id="FlexBox" class="topic">
+        <h2>FlexBox</h2>
+        <p>
+            Das CSS Flexbox-Modell bietet eine einfache Methode, um Elemente in einem Container auszurichten und zu verteilen. Es erleichtert die Erstellung von Layouts, bei denen die Größe und Position von Elementen flexibel sein muss. Flexbox ist besonders nützlich für responsive Designs, da es die Anordnung von Elementen je nach verfügbarem Platz automatisch anpasst.
+        </p>
+    </section>
+    <section id="GridBox" class="topic">
+        <h2>GridBox</h2>
+        <p>
+            CSS Grid Layout ist ein leistungsfähiges zweidimensionales Layout-System, das es ermöglicht, komplexe Webseitenstrukturen zu realisieren. Mit Grid können Sie sowohl Zeilen als auch Spalten gleichzeitig definieren und so ein Raster erstellen, das die Grundlage für moderne, responsive Webdesigns bildet. Es ergänzt Flexbox optimal, indem es umfangreiche Layoutmöglichkeiten bietet.
+        </p>
+    </section>
+</main>
+<footer>
+    <div id="userInfo">
+        <!-- Hier können Sie weiterhin z. B. die aktuelle Systemzeit anzeigen -->
+    </div>
+    <!-- Hier wird die Karte angezeigt -->
+    <div id="map"></div>
+</footer>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="content.js"></script>
+</body>
+</html>

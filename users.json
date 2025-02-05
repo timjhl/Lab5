@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "firstName": "Tim",
+      "lastName": "Johler",
+      "username": "tijo",
+      "password": "Baum-1234",
+      "gender": "männlich",
+      "interest": "HTML5",
+      "comments": "Ich mag dirnen"
+    }
+  ]
+}
