@@ -74,7 +74,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
             // Bei erfolgreicher Registrierung: Bestätigung anzeigen und Link zur Login-Seite anbieten
             document.getElementById("feedback").innerHTML =
                 "Herzlichen Glückwunsch, " + firstName + " " + lastName + "!<br>" +
-                "<a href='index.html'>Jetzt anmelden</a>";
+                "<a href='../index.html'>Jetzt anmelden</a>";
         })
         .catch(error => {
             console.error("Fehler bei der Registrierung:", error);

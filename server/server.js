@@ -4,14 +4,16 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
+
+// users.json liegt im gleichen Ordner wie server.js
 const usersFilePath = path.join(__dirname, 'users.json');
 
 // Middleware für JSON-Parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Statische Dateien aus dem "public"-Ordner servieren
-app.use(express.static('public'));
+// Statische Dateien aus dem Projektstamm (eine Ebene oberhalb von "server") servieren
+app.use(express.static(path.join(__dirname, '..')));
 
 // GET-Endpunkt, um alle Nutzer abzurufen (für Login)
 app.get('/users', (req, res) => {
